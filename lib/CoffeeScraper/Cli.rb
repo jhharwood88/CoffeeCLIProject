@@ -1,6 +1,6 @@
 class CoffeeScraper::Cli
 	
-	attr_accessor  :submenu_coffees #, :coffees
+	attr_accessor  :submenu_coffees
 
 	def start_menu
 		CoffeeScraper::Scraper.scrape
@@ -12,20 +12,7 @@ class CoffeeScraper::Cli
 
 	def initial_greeting
 		puts "Welcome to the Starbucks Coffee Selector!\n\n"
-		#@coffees = CoffeeScraper::CoffeeType.all
 	end
-
-	# def fresh_brewed_coffees
-	# 	@fresh_brewed_coffees = CoffeeScraper::Coffees.fresh_brewed_coffees
-	# end
-
-	# def espresso_beverages
-	# 	@espresso_beverages = CoffeeScraper::Coffees.espresso_beverages
-	# end
-
-	# def frappuccino
-	# 	@frappuccino = CoffeeScraper::Coffees.frappuccino
-	# end	
 
 	def available_coffees(menu_choice)
 		coffee_counter = 0
@@ -69,25 +56,6 @@ class CoffeeScraper::Cli
 				else
 					puts "Invalid respone, please enter your selection again"
 				end
-			# 	puts "#{fresh_brewed_coffees}"
-			# 	puts "Please choose your style of drink. To relist drink types put list, put exit to quit:"
-			# 	@submenu_input = gets.strip
-			# 	submenu
-			# 	@menu_input = "exit"  
-
-			# elsif @menu_input == "2"
-			# 	puts "#{espresso_beverages}"
-			# 	puts "Please choose your style of drink. To relist drink types put list, put exit to quit:"
-			# 	@submenu_input = gets.strip
-			# 	submenu
-			# 	@menu_input = "exit" 
-
-			# elsif @menu_input == "3"
-			# 	puts "#{frappuccino}"
-			# 	puts "Please choose your style of drink. To relist drink types put list, put exit to quit:"
-			# 	@submenu_input = gets.strip
-			# 	submenu
-			# 	@menu_input = "exit" 
 
 			elsif menu_input == "list"
 				welcome_message
@@ -99,43 +67,6 @@ class CoffeeScraper::Cli
 			end
 		end
 	end
-
-	# def submenu
-		
-	# 	while @submenu_input != "exit"
-			
-	# 		if @submenu_input == "1"
-	# 				puts "Info on drink 1"
-	# 				@submenu_input = gets.strip
-
-	# 		elsif @submenu_input == "2"
-	# 				puts "Info on drink 2"
-	# 				@submenu_input = gets.strip
-
-	# 		elsif @submenu_input == "3"
-	# 				puts "Info on drink 3"
-	# 				@submenu_input = gets.strip
-
-	# 		elsif @submenu_input == "4"
-	# 				puts "Info on drink 4"
-	# 				@submenu_input = gets.strip
-
-	# 		elsif @submenu_input == "5"
-	# 				puts "Info on drink 5"
-	# 				@submenu_input = gets.strip
-
-	# 		elsif @submenu_input == "list"
-	# 			coffee_list
-	# 			menu_selection
-
-	# 		elsif @submenu_input == "exit"
-
-	# 		else
-	# 			puts "Invalid respone, please enter your selection again"
-	# 			@submenu_input = gets.strip
-	# 		end
-	# 	end
-	# end
 
 	def exit_message
 		puts "Thanks for using Coffee Selector, have a great day!"
