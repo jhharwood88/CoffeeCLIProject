@@ -46,7 +46,7 @@ class CoffeeScraper::Cli
 			puts "#{ct_counter}: #{ct.name}"
 		end
 		puts "\n"
-		puts "Please chose from our list of drinks to begin. To relist drinks type list or exit to quit:\n"	
+		puts "Please chose from our list of drinks to begin. To relist drinks type list or exit to leave the application:\n"	
 	end
 
 	def check_string(string)
